@@ -1,0 +1,36 @@
+.gallery {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    width: 20%;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-link {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
